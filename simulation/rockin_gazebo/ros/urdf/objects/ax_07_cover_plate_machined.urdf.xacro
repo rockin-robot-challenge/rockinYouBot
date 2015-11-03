@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot name="ax_07_cover_plate_machined" xmlns:xacro="http://www.ros.org/wiki/xacro">
+ 
+  <!-- Included URDF/XACRO Files -->
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/model_template.urdf.xacro" />
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/common.urdf.xacro" />
+  <!-- reference frame-->
+  <link name="${origin}"/>
+
+  <xacro:macro name="ax_07_cover_plate_machined" params="name">
+    <!-- objects -->
+    <model_template object_model_path="${ax_07_cover_plate_machined}" mass_of_object="${ax_07_cover_plate_machined_mass}" com_of_object="${com_ax_07_cover_plate_machined}"
+      type_of_object="floating"
+      link_name="${name}" parent="${origin}" 
+      trans_x="0" trans_y="0" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+
+  </xacro:macro>
+  <xacro:ax_07_cover_plate_machined name="ax_07_cover_plate_machined" />
+</robot>

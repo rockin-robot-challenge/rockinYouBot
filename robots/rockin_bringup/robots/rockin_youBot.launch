@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>	
+  <!-- This starts the ROS interface for the youBot API -->	
+  <include file="$(find rockin_bringup)/components/youbot_oodl_driver.launch" />
+
+  <!-- This starts the laserscanner node. In this case it is a front mounted Hokuyo URG04-UG01 -->
+  <include file="$(find rockin_bringup)/components/base_front_hokuyo_node.launch" />
+
+  <!-- This starts the joypad node. We use a Logitech Gamepad F710 -->
+  <include file="$(find rockin_teleop)/ros/launch/rockin_teleop_joypad.launch" />
+
+  <!-- This starts the node for the cartesian positioning of the youBot arm and the node to control the youBot gripper -->
+  <include file="$(find rockin_arm_cartesian_control)/ros/launch/rockin_arm_cartesian_control_youbot.launch" />	
+  <include file="$(find rockin_gripper_controller)/ros/launch/gripper_controller.launch" />
+</launch>

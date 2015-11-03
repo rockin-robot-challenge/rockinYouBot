@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>rockin_gazebo</name>
+  <version>0.1.0</version>
+  <description>
+	  This package provides gazeabo simulation models for rockin@work environments.
+  </description>
+
+  <maintainer email="shehzad.ahmed@smail.inf.h-brs.de">Shehzad Ahmed</maintainer>
+  <license>GPLv3</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <export>
+    <gazebo_ros gazebo_media_path="${prefix}"/>
+  </export>
+</package>

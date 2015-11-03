@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<robot name="model_template" 
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:gazebo="http://playerstage.sourceforge.net/gazebo/xmlschema/#gz"
+      xmlns:model="http://playerstage.sourceforge.net/gazebo/xmlschema/#model"
+      xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
+      xmlns:body="http://playerstage.sourceforge.net/gazebo/xmlschema/#body"
+      xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom"
+      xmlns:joint="http://playerstage.sourceforge.net/gazebo/xmlschema/#joint"
+      xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
+      xmlns:rendering="http://playerstage.sourceforge.net/gazebo/xmlschema/#rendering"
+      xmlns:renderable="http://playerstage.sourceforge.net/gazebo/xmlschema/#renderable"
+      xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"
+      xmlns:physics="http://playerstage.sourceforge.net/gazebo/xmlschema/#physics"
+      xmlns:xacro="http://www.ros.org/wiki/xacro">  
+  
+  <xacro:macro name="model_template" params="object_model_path mass_of_object com_of_object type_of_object
+    link_name parent trans_x trans_y trans_z rot_x rot_y rot_z">
+          <link name="${link_name}">
+          <inertial>
+            <mass value="${mass_of_object}" />
+            <origin xyz="${com_of_object}" />
+            <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="1.0"  iyz="0.0"  izz="1.0" />
+          </inertial>
+          <visual>
+            <!-- visual origin is defined w.r.t. link local coordinate system -->
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+              <mesh filename="${object_model_path}" scale="0.001 0.001 0.001"/>
+            </geometry>
+          </visual>
+          <collision>
+            <!-- collision origin is defined w.r.t. link local coordinate system -->
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+              <mesh filename="${object_model_path}" scale="0.001 0.001 0.001"/>
+            </geometry>
+          </collision>
+          </link>
+
+          <joint name="${link_name}_joint" type="${type_of_object}">
+              <parent link="${parent}"/>
+              <child link="${link_name}"/>
+              <origin xyz="${trans_x} ${trans_y} ${trans_z}" rpy="${rot_x} ${rot_y} ${rot_z}"/>
+                <limit effort="100" velocity="100"/>
+                <joint_properties damping="0.0" friction="0.0"/>
+          </joint>
+
+          <gazebo reference="${link_name}">
+              <maxContacts>20</maxContacts>
+              <material>Gazebo/White</material>
+              <selfCollide>true</selfCollide>
+          </gazebo>
+  </xacro:macro>
+</robot>

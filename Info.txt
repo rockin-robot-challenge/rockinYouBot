@@ -1,0 +1,127 @@
+## RoCKIn general information
+The following README should provide teams participating at the EU-funded RoCKIn project with a comprehensive overview of available software repositories.
+This document will list official repositories from the RoCKIn partners, as well as repositories with useful modules that can be used to solve the problems
+arising in the RoCKIn scenarios.
+It will furthermore explain very short which functionality is handled by the different modules and why you need this functionality in your system.
+
+This should help new teams to faster set up their robot and focus on their specific field of research.
+
+In the end we will point to some repositories from teams that already participated at one of the RoCKIn events. Because a lot of teams modify their robot
+to suit their needs, these repositories are not meant to be used without a lot of care. For someone new to building a complex system, they will show you
+different ways of structuring your own system and also show different ways of combining standalone modules to work together to achieve new functionalities.
+
+## Official RoCKIn repositories
+The official repository of the RoCKIn project is located at:
+   
+    https://github.com/rockin-robot-challenge
+
+It provides teams with different functionalities necessary to successfully compete in the RoCKIn competition.
+### Logging and benchmarking
+On the Wiki page for the RoCKIn project you can find the Benchmarking Kit:
+
+     svn checkout https://labrococo.dis.uniroma1.it/svn/software-open/trunk/rococo-ros/rockin_logger
+
+This repository serves as an example on how to set up everything you need to be able to log all necessary data in the correct form.
+
+## ROS modules
+This subsection will focus on some often used modules from ROS. It is split into subsections that focus on their specific role in the RoCKIn benchmarks.
+These modules can be used standalone, but are intended to be used together to build a complete system that is able to solve all the given tasks. The list
+of modules is not complete, so feel free to use any other module or create your own!
+ 
+### Navigation
+One of the basic components you need is navigation.
+
+     http://wiki.ros.org/navigation
+
+The navigation from ROS handles input from different sensors to localize the robot in a map. To create a map you can use:
+	
+	http://wiki.ros.org/gmapping
+	http://wiki.ros.org/hector_slam
+
+### Object perception
+The next step you need is object perception. To be able to pick up an object you first have to find it. The object recognition pipeline from
+ROS is a good start to get your object perception up and running:
+	
+	http://wg-perception.github.io/object_recognition_core/
+	
+If you follow the tutorials you should be able to _train_ new objects and afterwards you should be able to _recognize_ them.
+
+Another tool you should have a look at is PyBrain:
+
+	http://pybrain.org/
+	
+It is a machine learning library that provides a lot of functionalities needed in object recognition/perception. This is a good starting point, if
+you intend to do more "on your own".
+
+### Manipulation
+The third most important function for your robot is the ability to manipulate objects. The ROS stack MoveIt!:
+	
+	http://moveit.ros.org/
+	
+can be used for simulation, as well as for control of the real robot.
+
+### Additional functionality
+The team robOTTO from the OvGU Magdeburg implemented a client to work together with the CFH at RoCKIn Camp 2015 in Peccioli. You can find the client in their repository
+	
+	https://github.com/robottoOvGU/ros-cfh-example
+
+### Marker recognition
+To be able to complete all tasks you need to be able to recognize different markers in the environment. The markers used are based on ArUco:
+
+	http://www.uco.es/investiga/grupos/ava/node/26
+	
+The website provides a lot of information, even a few research papers that explain in depth how the markers and the library works. 
+
+## Team repositories
+
+### BRSU (MAS-Group)
+The team from the Bonn-Rhein-Sieg-University (BRSU) has a complete repository, which can be used with minor modifications for a standard
+KUKA youBot system.
+
+	https://github.com/mas-group/robocup-at-work
+	
+The repository is especially useful, because even the "Pre-Setup-Phase", eg. the necessary steps you have to take before using the repository
+itself, is described in the README. Using this repository will help you understand how to combine different ROS packages to work together to 
+solve difficult tasks. If you follow the README.md you will be able to use the basic functionalities for navigation and grasping in a short period of time.
+
+### smARTLab
+The team smARTLab@Work from the university of Liverpool also provide a complete repository. 
+
+	https://github.com/smARTLab-liv/smartlabatwork-release
+	
+Because the team did modify the youBot hardware a lot it is not as easy to use as the repository from BRSU. It is still a very good example of how
+you can set up a vast repository with different functionalities. The scripting language of choice is Python, so you are also able to see and compare
+the different ways a "Competition-Setup" can be created. The repository itself has a very clean structure with self-explaining module names, so navigating
+through the repository it is easy to identify the different modules and their functions.
+
+### youBot
+Because most teams at the moment use the KUKA youBot to participate in the RoCKIn@Work league, the following repository combines
+some of the above mentioned modules and explains not only the software side, but also the setup of the hardware necessary to 
+work with this repository effectively.
+
+The components you need to run it are:
+- Laptop running Ubuntu Linux 12.04 with ROS Hydro installed
+- KUKA youBot System 6 (1 base, 1 Arm)
+- Logitech Wireless Gamepad F710
+- Hokuyo URG-04LX-UG01 Laserscanner (mounted with Hokuyo carrier sensor plate in front of the youBot)
+
+It will show how to set up navigation using the ROS navigation package and how to grasp objects using the MoveIt! package.
+Using this repository you will be able to create a map of your environment, navigate to different waypoints and grasp objects at pre-defined positions.
+
+The basic steps are:
+- create map by driving around the environment using the gamepad
+- using the map for autonomous navigation
+- defining waypoints in the map
+- navigate to a desired waypoint
+- setting up pre-defined grasp positions
+- using MoveIt! to grasp objects (at the pre-defined grasp positions)
+
+The complete setup with object/marker perception/recognition etc. is left to the competing teams.
+
+To start using the RoCKIn youBot Repository move on to:
+	
+	https://github.com/rockin-robot-challenge/rockinYouBot
+
+
+
+	

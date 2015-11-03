@@ -1,0 +1,5 @@
+<launch>
+
+  <include file="$(find rockin_moveit_rockin_youbot)/launch/move_group.launch" />
+  
+</launch>

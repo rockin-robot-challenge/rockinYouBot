@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+        
+  <node pkg="rockin_relative_base_controller" type="rockin_relative_base_controller_node" name="rockin_relative_base_controller" ns="rockin_navigation" output="screen">
+    <param name="world_frame_tf" type="string" value="/odom" />
+    <param name="base_frame_tf" type="string" value="/base_footprint" />
+  </node>
+
+</launch>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot name="ax_09_motor_with_gearbox" xmlns:xacro="http://www.ros.org/wiki/xacro">
+ 
+  <!-- Included URDF/XACRO Files -->
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/model_template.urdf.xacro" />
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/common.urdf.xacro" />
+  <!-- reference frame-->
+  <link name="${origin}"/>
+
+  <xacro:macro name="ax_09_motor_with_gearbox" params="name">
+    <!-- objects -->
+    <model_template object_model_path="${ax_09_motor_with_gearbox}" mass_of_object="${ax_09_motor_with_gearbox_mass}" com_of_object="${com_ax_09_motor_with_gearbox}"
+      type_of_object="floating"
+      link_name="${name}" parent="${origin}" 
+      trans_x="0" trans_y="0" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+
+  </xacro:macro>
+  <xacro:ax_09_motor_with_gearbox name="ax_09_motor_with_gearbox" />
+</robot>

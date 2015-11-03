@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+        
+  <node pkg="rockin_relative_base_controller" type="rockin_relative_base_controller_mockup" name="relative_base_controller" ns="rockin_navigation" output="screen"/>
+
+</launch>

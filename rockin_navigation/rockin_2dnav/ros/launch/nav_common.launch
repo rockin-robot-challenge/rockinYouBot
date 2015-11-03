@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="robot_env" default="$(optenv ROBOT_ENV !!NO_ROBOT_ENV_SET!!)"/>
+
+  <!-- navigation goals/orientations -->
+	<include file="$(find rockin_default_env_config)/upload_param.launch"/>
+	<node pkg="rockin_navigation_tools" type="rockin_navigation_goals_as_marker" name="rockin_navigation_goals_as_marker" ns="rockin_navigation_tools"/>
+
+  <!-- map server -->
+	<arg name="map" default="$(find rockin_default_env_config)/$(arg robot_env)/map.yaml" />
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map)"/>
+
+  <!-- AMCL -->
+	<!-- Republish scanner topics into a single topic -->
+	<!--<node pkg="topic_tools" type="relay" name="front_laser_scanner_repub" args="/scan_combined"/>-->
+
+	<!--particle filter-->
+	<include file="$(find rockin_2dnav)/ros/launch/amcl.launch" />
+	
+</launch>

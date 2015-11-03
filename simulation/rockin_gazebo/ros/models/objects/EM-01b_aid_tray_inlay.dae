@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 2.71.0 commit date:2014-06-12, commit time:18:39, hash:169c95b</authoring_tool>
+    </contributor>
+    <created>2015-09-10T22:16:53</created>
+    <modified>2015-09-10T22:16:53</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_geometries>
+    <geometry id="EM-01b_aid_tray_inlay-mesh" name="EM-01b aid tray inlay">
+      <mesh>
+        <source id="EM-01b_aid_tray_inlay-mesh-positions">
+          <float_array id="EM-01b_aid_tray_inlay-mesh-positions-array" count="123">27.49999 25.5 -5 27.49999 -5.499998 -5 7.499997 5.499998 -5 -27.49999 -5.499997 -5 -27.49998 25.5 -5 -7.499987 5.499999 -5 4.91738e-6 5.499998 -5 27.5 25.5 5 7.500004 5.499996 5 27.49997 -5.500001 5 7.37607e-6 5.499996 5 -7.499989 5.499997 5 -27.49999 25.5 5 -27.5 -5.499996 5 -7.500005 -5.499997 5 -1.39326e-5 -5.499998 5 7.499978 -5.5 5 27.49999 25.5 -2.5 27.5 25.5 0 27.5 25.5 2.5 -27.49999 25.5 2.5 -27.49998 25.5 0 -27.49998 25.5 -2.5 -7.499987 5.499998 -2.5 -7.499989 5.499998 2.5 -7.499987 5.499998 0 7.500002 5.499996 2.5 7.5 5.499997 0 7.499999 5.499997 -2.5 5.000002 5.499996 5 4.999985 -5.5 5 -4.999994 5.499997 5 3.82463e-6 5.499996 5 -1.03811e-5 -5.499998 5 -5.000005 -5.499997 5 4.999985 -5.5 13 -1.03811e-5 -5.499998 13 -5.000005 -5.499997 13 3.82463e-6 5.499996 13 5.000002 5.499996 13 -4.999994 5.499997 13</float_array>
+          <technique_common>
+            <accessor source="#EM-01b_aid_tray_inlay-mesh-positions-array" count="41" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="EM-01b_aid_tray_inlay-mesh-normals">
+          <float_array id="EM-01b_aid_tray_inlay-mesh-normals-array" count="243">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 -1 0 0 1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 1 0 -1.52588e-6 0 1 0 1 -9.84438e-7 -1.52588e-6 1 -2.61491e-7 1.71661e-6 1 -9.53674e-7 -1.14441e-6 0 -1 -3.33786e-7 0 0 -1 0 0 1 0 -1 1.43051e-7 0 -1 0 -1 4.30692e-7 -5.72205e-7 -1 3.69164e-7 -7.62939e-7 0 0 0 -1 3.69164e-7 -7.62939e-7 -1 3.69164e-7 -7.62939e-7 0.707107 0.7071067 4.0461e-7 0.7071068 0.7071067 5.3948e-7 0.7071068 0.7071068 6.7435e-7 0.7071068 0.7071068 5.3948e-7 0.7071068 0.7071067 0 0.7071068 0.7071068 5.3948e-7 0.7071068 0.7071068 1.3487e-7 0.7071068 0.7071068 1.07896e-6 -0.7071068 0.7071068 1.61844e-6 -0.7071068 0.7071068 6.7435e-7 -0.7071068 0.7071067 1.07896e-6 -0.7071068 0.7071068 6.7435e-7 1.27157e-7 1 3.8147e-7 0 1 1.90735e-7 0.7071068 -0.7071068 -5.3948e-7 0 1 1.90735e-7 0.4472136 -0.8944272 0 0 1 1.90735e-7 0 1 0 0 1 1.27157e-7 0 1 3.8147e-7 -0.7071068 0.7071067 5.3948e-7 -0.7071068 0.7071067 5.3948e-7 -0.7071069 0.7071067 1.07896e-6 -0.7071068 0.7071067 5.3948e-7 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 -1 0 0 -1 -3.8147e-7 -1 0 -3.8147e-7 -1 0 -1.90735e-7 -1 0 -1.90735e-7 -1 0 0 1 0 0 1 0 1 -9.97024e-7 0 1 -9.97024e-7 0 0 1 0 0 1 0 1 -1.56056e-6 0 1 -1.56056e-6 0 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#EM-01b_aid_tray_inlay-mesh-normals-array" count="81" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="EM-01b_aid_tray_inlay-mesh-vertices">
+          <input semantic="POSITION" source="#EM-01b_aid_tray_inlay-mesh-positions"/>
+        </vertices>
+        <polylist count="81">
+          <input semantic="VERTEX" source="#EM-01b_aid_tray_inlay-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#EM-01b_aid_tray_inlay-mesh-normals" offset="1"/>
+          <vcount>3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 </vcount>
+          <p>0 0 1 0 2 0 3 1 4 1 5 1 1 2 6 2 2 2 1 3 3 3 5 3 1 4 5 4 6 4 7 5 8 5 9 5 8 6 10 6 11 6 11 7 12 7 13 7 14 8 15 8 16 8 8 9 16 9 9 9 8 10 11 10 13 10 8 11 14 11 16 11 8 12 13 12 14 12 0 13 17 13 1 13 17 14 18 14 19 14 19 15 7 15 9 15 17 16 9 16 1 16 17 17 19 17 9 17 1 18 9 18 3 18 9 19 16 19 15 19 15 20 14 20 13 20 9 21 15 21 3 21 15 22 13 22 3 22 3 23 13 23 4 23 13 24 12 24 20 24 20 25 21 25 22 25 13 26 22 26 4 26 13 27 20 27 22 27 23 28 5 28 4 28 4 29 22 29 23 29 24 30 25 30 21 30 21 31 20 31 24 31 25 32 23 32 22 32 22 33 21 33 25 33 11 34 24 34 20 34 20 35 12 35 11 35 7 36 19 36 26 36 26 37 8 37 7 37 19 38 18 38 27 38 27 39 26 39 19 39 6 40 5 40 23 40 25 41 24 41 11 41 27 42 28 42 2 42 6 43 23 43 2 43 23 44 25 44 11 44 11 45 8 45 26 45 23 46 27 46 2 46 23 47 11 47 26 47 23 48 26 48 27 48 18 49 17 49 28 49 28 50 27 50 18 50 17 51 0 51 2 51 2 52 28 52 17 52 16 53 8 53 29 53 29 54 30 54 16 54 10 55 11 55 31 55 31 56 32 56 10 56 15 57 16 57 30 57 30 58 33 58 15 58 8 59 10 59 32 59 32 60 29 60 8 60 14 61 15 61 33 61 33 62 34 62 14 62 14 63 11 63 31 63 31 64 34 64 14 64 33 65 30 65 35 65 35 66 36 66 33 66 34 67 33 67 36 67 36 68 37 68 34 68 29 69 32 69 38 69 38 70 39 70 29 70 34 71 31 71 40 71 40 72 37 72 34 72 32 73 31 73 40 73 40 74 38 74 32 74 30 75 29 75 39 75 39 76 35 76 30 76 40 77 37 77 38 77 36 78 35 78 39 78 37 79 39 79 38 79 37 80 36 80 39 80</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="EM-01b_aid_tray_inlay" name="EM-01b_aid_tray_inlay" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#EM-01b_aid_tray_inlay-mesh"/>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>rockin_bringup_sim</name>
+  <version>0.0.1</version>
+  <description>bringup launch files to start a desired industrial robot in simulation</description>
+
+  <license>GPLv3</license>
+
+  <author email="tim.friedrich@kuka.com">Tim Friedrich</author>
+
+  <maintainer email="tim.friedrich@kuka.com">Tim Friedrich</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>rockin_gazebo_worlds</run_depend>   
+  <run_depend>rockin_arm_cartesian_control</run_depend>
+  <run_depend>rockin_default_robot_config</run_depend>
+  <run_depend>rockin_hardware_config</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>youbot_gazebo_control</run_depend>
+ 
+</package>

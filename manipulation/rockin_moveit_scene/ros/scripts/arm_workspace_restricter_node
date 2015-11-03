@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+
+import rockin_moveit_scene_ros.restrict_arm_workspace
+
+if __name__ == '__main__':
+    rockin_moveit_scene_ros.restrict_arm_workspace.main()

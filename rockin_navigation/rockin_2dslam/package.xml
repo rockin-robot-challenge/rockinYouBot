@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>rockin_2dslam</name>
+  <version>0.0.1</version>
+  <description>map building with SLAM (e.g. gmapping)</description>
+
+  <maintainer email="tim.friedrich@kuka.com">Tim Friedrich</maintainer>
+
+  <license>GPLv3</license>
+
+  <author email="tim.friedrich@kuka.com">Tim Friedrich</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>gmapping</run_depend>
+
+</package>

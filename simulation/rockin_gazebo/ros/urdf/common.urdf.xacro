@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<robot name="common" xmlns:xacro="http://www.ros.org/wiki/xacro">
+ <!-- PROPERTY LIST -->
+  <!--All units in m-kg-s-radians unit system -->
+  <property name="M_PI" value="3.1415926535897931" />
+  <property name="M_PI_2" value="1.570796327" />
+  
+  <!-- dimesions of objects -->
+  <property name="walls_width" value="0.04" />
+  <property name="wall_120_len" value="1.2" />
+  <property name="wall_80_len" value="0.8" />
+  <property name="wall_54_len" value="0.54" />
+  <property name="platform_len" value="0.8" />
+  <property name="platform_width" value="0.5" />
+  <property name="platform_height" value="0.099" />
+  <property name="shelf_length" value="0.88" />
+  <property name="conveyor_belt_length" value="1.12" />
+  <property name="conveyor_belt_height" value="0.11" />
+  <property name="quality_control_camera_width" value="0.250" />
+  <property name="exit_ramp_breadth" value="0.125" />
+  <property name="entrance_width" value="1.04" />
+  <property name="rack_width" value="0.2" />
+  <property name="em_01_aid_tray_width" value="0.085" />
+  <property name="ax_06b_cover_plate_length" value="0.049" />
+  <property name="ax_06b_cover_plate_breadth" value="0.045" />
+  <property name="ax_06b_cover_plate_width" value="0.003" />
+
+  <property name="ax_03_axis_diameter" value="0.027" />
+  <property name="ax_09_motor_with_gearbox_diameter" value="0.042" />
+
+  <!-- reference frame name -->
+  <property name="origin" value="world" />
+  
+  <!--path to models -->
+  <property name="wall_54" value="package://rockin_gazebo/ros/models/arena/wall_540x300x40.dae" />
+  <property name="wall_80" value="package://rockin_gazebo/ros/models/arena/wall_800x300x40.dae" />
+  <property name="wall_120" value="package://rockin_gazebo/ros/models/arena/wall_1200x300x40.dae" />
+  <property name="platform" value="package://rockin_gazebo/ros/models/arena/platform_800x500x99.dae" />
+  <property name="rack" value="package://rockin_gazebo/ros/models/arena/aid_tray_rack.dae" />
+  <property name="shelf" value="package://rockin_gazebo/ros/models/arena/shelf.dae" />
+  <property name="exit_ramp" value="package://rockin_gazebo/ros/models/devices/exit_ramp.dae" />
+  <property name="conveyor_belt" value="package://rockin_gazebo/ros/models/devices/conveyor_belt.dae" />
+  <property name="force_fitting_machine" value="package://rockin_gazebo/ros/models/devices/force_fitting_machine.dae" />
+  <property name="drill_machine" value="package://rockin_gazebo/ros/models/devices/drilling_machine_wit_aid.dae" />
+  <property name="quality_control_camera" value="package://rockin_gazebo/ros/models/devices/quality_control_camera_with_mount.dae" />
+  
+  <property name="ax_01b_bearing_box" value="package://rockin_gazebo/ros/models/objects/AX-01b_bearing_box.dae" />
+  <property name="ax_01_bearing_box" value="package://rockin_gazebo/ros/models/objects/AX-01_bearing_box.dae" />
+  <property name="ax_02_bearing" value="package://rockin_gazebo/ros/models/objects/AX-02_bearing.dae" />
+  <property name="ax_03_axis" value="package://rockin_gazebo/ros/models/objects/AX-03_axis.dae" />
+  <property name="ax_04_shaft_nut" value="package://rockin_gazebo/ros/models/objects/AX-04_shaft_nut.dae" />
+  <property name="ax_05_distance_tube" value="package://rockin_gazebo/ros/models/objects/AX-05_distance_tube.dae" />
+  <property name="ax_06b_cover_plate_no_hole" value="package://rockin_gazebo/ros/models/objects/AX-06b_cover_plate_no_hole.dae" />
+  <property name="ax_06_cover_plate_defect" value="package://rockin_gazebo/ros/models/objects/AX-06_cover_plate_defect.dae" />
+  <property name="ax_07_cover_plate_machined" value="package://rockin_gazebo/ros/models/objects/AX-07_cover_plate_machined.dae" />
+  <property name="ax_09_motor_with_gearbox" value="package://rockin_gazebo/ros/models/objects/AX-09_motor_with_gearbox.dae" />
+  <property name="ax_10_screw1_coverplate_motor" value="package://rockin_gazebo/ros/models/objects/AX-10_screw1_coverplate_motor.dae" />
+  <property name="ax_11_screw2_coverplate_motor" value="package://rockin_gazebo/ros/models/objects/AX-11_screw2_coverplate_motor.dae" />
+  <property name="em_01_aid_tray" value="package://rockin_gazebo/ros/models/objects/EM-01_aid_tray.dae" />
+  <property name="em_01b_aid_tray_inlay" value="package://rockin_gazebo/ros/models/objects/EM-01b_aid_tray_inlay.dae" />
+  <property name="em_02_coverplates_box" value="package://rockin_gazebo/ros/models/objects/EM-02_coverplates_box.dae" />
+  <property name="er_02_container" value="package://rockin_gazebo/ros/models/objects/ER-02_container.dae" />
+
+  <!-- weights(Kg) -->
+  <property name="wall_120_mass" value="5.0" />
+  <property name="wall_80_mass" value="3.5" />
+  <property name="wall_54_mass" value="3.0" />
+  <property name="platform_mass" value="11.5" />
+  <property name="shelf_mass" value="21.0" />
+  <property name="aid_tray_rack_mass" value="3.0" />
+  <property name="conveyor_belt_mass" value="20.0" />
+  <property name="quality_control_camera_mass" value="1.0"/>
+  <property name="exit_ramp_mass" value="0.523"/>
+  <property name="drill_machine_mass" value="15.5" />
+  <property name="force_fitting_machine_mass" value="6.0" /> 
+
+  <property name="ax_01b_bearing_box_mass" value="0.054" />
+  <property name="ax_01_bearing_box_mass" value="0.101" />
+  <property name="ax_02_bearing_mass" value="0.044" />
+  <property name="ax_03_axis_mass" value="0.043" />
+  <property name="ax_04_shaft_nut_mass" value="0.014" />
+  <property name="ax_05_distance_tube_mass" value="0.004" />
+  <property name="ax_06b_cover_plate_no_hole_mass" value="0.015" />
+  <property name="ax_06_cover_plate_defect_mass" value="0.015" />
+  <property name="ax_07_cover_plate_machined_mass" value="0.015" />
+  <property name="ax_09_motor_with_gearbox_mass" value="0.022" />
+  <property name="ax_10_screw1_coverplate_motor_mass" value="1.0" />
+  <property name="ax_11_screw2_coverplate_motor_mass" value="1.0" />
+  <property name="em_01_aid_tray_mass" value="0.048" />
+  <property name="em_01b_aid_tray_inlay_mass" value="0.005" />
+  <property name="em_02_coverplates_box_mass" value="0.075" />
+  <property name="er_02_container_mass" value="0.088" />
+
+  <!-- center of masses -->
+  <property name="com_wall_54" value="-0.020 0.270 0.150"/>
+  <property name="com_wall_80" value="-0.020 0.400 0.150"/>
+  <property name="com_wall_120" value="-0.020 0.600 0.150"/>
+  <property name="com_shelf" value="0.225 0.400 0.222"/>
+  <property name="com_platform" value="0.250 0.401 0.064"/>
+  <property name="com_rack" value="0.0354 0.1 0.1783"/>
+  <property name="com_exit_ramp" value="-0.00011 0.034 0.0272"/>
+  <property name="com_conveyor_belt" value="-0.0234 0.608 0.100"/>
+  <property name="com_quality_control_camera" value="0.026 0.124 0.275"/>
+  <property name="com_force_fitting" value="0.079 -0.0016 0.166"/>
+  <property name="com_drill_machine" value="0.036 -0.00536 0.307"/>
+
+  <property name="com_ax_01b_bearing_box" value="0.0185 0.025 0.0115" />
+  <property name="com_ax_01_bearing_box" value="0.021 0.025 0.013" />
+  <property name="com_ax_02_bearing" value="0.0065 0 0" />
+  <property name="com_ax_03_axis" value="0.0404 0 0" />
+  <property name="com_ax_04_shaft_nut" value="-0.0036 0 0" />
+  <property name="com_ax_05_distance_tube" value="0 0 0.005" />
+  <property name="com_ax_06b_cover_plate_no_hole" value="0.022 0.024 0.0015" />
+  <property name="com_ax_06_cover_plate_defect" value="0.022 0.024 0.0015" />
+  <property name="com_ax_07_cover_plate_machined" value="0.022 0.024 0.0015" />
+  <property name="com_ax_09_motor_with_gearbox" value="0.0363 0.00056 0" />
+  <property name="com_ax_10_screw1_coverplate_motor" value="0.004 0 0" />
+  <property name="com_ax_11_screw2_coverplate_motor" value="0 0.00354 0" />
+  <property name="com_em_01_aid_tray" value="0.031 0.058 0.011" />
+  <property name="com_em_01b_aid_tray_inlay" value="0 0.0068 0.003" />
+  <property name="com_em_02_coverplates_box" value="0 0.011 0.0135" />
+  <property name="com_er_02_container" value="-0.088 0.0685 0.029" />
+</robot>

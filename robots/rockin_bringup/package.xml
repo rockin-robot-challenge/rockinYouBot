@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>rockin_bringup</name>
+  <version>0.0.1</version>
+  <description>launch files to bring up a complete robot or only specific components</description>
+  <maintainer email="tim.friedrich@kuka.com">Tim Friedrich</maintainer>
+  <license>GPLv3</license>
+  <author email="tim.friedrich@kuka.com">Tim Friedrich</author>
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>hokuyo_node</run_depend> <!-- The laserscanner node -->
+  <run_depend>rockin_default_env_config</run_depend> <!-- The environment in which the robot is going to move/simulated -->
+  <run_depend>rockin_arm_cartesian_control</run_depend> <!-- The node that handles movement of youBot arm in cartesian space -->
+  <run_depend>rockin_default_robot_config</run_depend> <!-- The default robot configuration -->
+  <run_depend>rockin_gripper_services</run_depend> <!-- Used to open/close the gripper of the youBot -->
+  <run_depend>rockin_hardware_config</run_depend> <!-- The hardware of the robot. E.g. base, arm, gripper, laserscanner etc...  -->
+  <run_depend>rockin_teleop</run_depend> <!-- Used to start the joypad node -->
+  <run_depend>robot_state_publisher</run_depend> <!-- Used in ROS to communicate the robot state to other nodes -->
+  <run_depend>tf</run_depend> <!-- The ROS-transformations used to compute values in the same coordinate system  -->
+  <run_depend>youbot_driver_ros_interface</run_depend> <!-- This loads the ROS interface to the youBot API -->
+</package>

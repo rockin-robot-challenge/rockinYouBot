@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <name>rockin_simulation</name>
+  <version>0.0.1</version>
+  <description>Collection of simulation related packages</description>
+
+  <license>GPLv3</license>
+
+  <author email="tim.friedrich@kuka.com">Tim Friedrich</author>
+
+  <maintainer email="tim.friedrich@kuka.com">Tim Friedrich</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

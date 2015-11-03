@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<launch>
+	<node pkg="rockin_navigation_tools" type="rockin_navigation_goals_as_marker" name="rockin_navigation_goals_as_marker" ns="rockin_navigation" respawn="false" output="screen" />
+</launch>

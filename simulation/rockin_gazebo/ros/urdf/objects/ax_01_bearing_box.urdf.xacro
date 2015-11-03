@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot name="ax_01_bearing_box" xmlns:xacro="http://www.ros.org/wiki/xacro">
+ 
+  <!-- Included URDF/XACRO Files -->
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/model_template.urdf.xacro" />
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/common.urdf.xacro" />
+  <!-- reference frame-->
+  <link name="${origin}"/>
+
+  <xacro:macro name="ax_01_bearing_box" params="name">
+    <!-- objects -->
+    <model_template object_model_path="${ax_01_bearing_box}" mass_of_object="${ax_01_bearing_box_mass}" com_of_object="${com_em_01b_aid_tray_inlay}"
+      type_of_object="floating"
+      link_name="${name}" parent="${origin}" 
+      trans_x="0" trans_y="0" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+
+  </xacro:macro>
+  <xacro:ax_01_bearing_box name="ax_01_bearing_box" />
+</robot>

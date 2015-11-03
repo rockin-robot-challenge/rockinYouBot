@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="use_sim_time" default="true"/>
+    <arg name="gui" default="true"/>
+    <arg name="headless" default="false"/>
+    <arg name="debug" default="false"/>
+    <arg name="paused" default="false"/>
+    <arg name="world_name" default="worlds/empty.world" />
+    <arg name="world_env" default="lisboa" />
+    <!-- send world urdf to param server -->
+    <param name="world_description" command="$(find xacro)/xacro.py $(find rockin_gazebo)/ros/urdf/$(arg world_env).urdf.xacro" />
+    <!-- uploading object configurations to param server -->
+    <rosparam command="load" ns="simulation/objects" file="$(find rockin_gazebo)/config/$(arg world_env).yaml"/>
+
+    <!-- start gazebo with empty world -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_name)" />
+        <arg name="debug" value="$(arg debug)" />
+        <arg name="headless" value="$(arg headless)" />
+        <arg name="paused" value="$(arg paused)" />
+        <arg name="use_sim_time" value="$(arg use_sim_time)" />
+        <arg name="gui" value="$(arg gui)" />
+    </include>
+    
+    <!-- spawn uploaded world model -->
+    <node pkg="gazebo_ros" type="spawn_model" name="gazebo_world_model" args="-urdf -param world_description -model world" respawn="false" output="screen" />
+
+    <!-- spawn objects into simulation world -->
+    <node pkg="rockin_gazebo" type="spawn_objects.py" name="spawn_simulation_objects" respawn="false" output="screen" />
+</launch>

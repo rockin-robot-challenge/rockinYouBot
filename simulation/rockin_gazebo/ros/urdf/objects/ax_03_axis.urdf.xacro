@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot name="ax_03_axis" xmlns:xacro="http://www.ros.org/wiki/xacro">
+ 
+  <!-- Included URDF/XACRO Files -->
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/model_template.urdf.xacro" />
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/common.urdf.xacro" />
+  <!-- reference frame-->
+  <link name="${origin}"/>
+
+  <xacro:macro name="ax_03_axis" params="name">
+    <!-- objects -->
+    <model_template object_model_path="${ax_03_axis}" mass_of_object="${ax_03_axis_mass}" com_of_object="${com_ax_03_axis}"
+      type_of_object="floating"
+      link_name="${name}" parent="${origin}" 
+      trans_x="0" trans_y="0" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+
+  </xacro:macro>
+  <xacro:ax_03_axis name="ax_03_axis" />
+</robot>

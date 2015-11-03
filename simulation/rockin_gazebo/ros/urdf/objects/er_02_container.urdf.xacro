@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot name="er_02_container" xmlns:xacro="http://www.ros.org/wiki/xacro">
+ 
+  <!-- Included URDF/XACRO Files -->
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/model_template.urdf.xacro" />
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/common.urdf.xacro" />
+  <!-- reference frame-->
+  <link name="${origin}"/>
+
+  <xacro:macro name="er_02_container" params="name">
+    <!-- objects -->
+    <model_template object_model_path="${er_02_container}" mass_of_object="${er_02_container_mass}" com_of_object="${com_er_02_container}"
+      type_of_object="floating"
+      link_name="${name}" parent="${origin}" 
+      trans_x="0" trans_y="0" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+
+  </xacro:macro>
+  <xacro:er_02_container name="er_02_container" />
+</robot>

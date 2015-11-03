@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<robot name="lisboa_model" xmlns:xacro="http://www.ros.org/wiki/xacro">
+ 
+  <!-- Included URDF/XACRO Files -->
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/model_template.urdf.xacro" />
+  <xacro:include filename="$(find rockin_gazebo)/ros/urdf/common.urdf.xacro" />
+  <!-- reference frame-->
+
+  <link name="${origin}"/>
+  <xacro:macro name="lisboa-world" params="name">
+    <!-- side Walls -->
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}" 
+      type_of_object="fixed"
+      link_name="wall_1" parent="${origin}" 
+      trans_x="${walls_width}" trans_y="${entrance_width/2}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_2" parent="wall_1" 
+      trans_x="0" trans_y="${wall_80_len-walls_width}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="-${M_PI_2}"/>
+    <model_template object_model_path="${wall_120}" mass_of_object="${wall_120_mass}" com_of_object="${com_wall_120}"
+      type_of_object="fixed"
+      link_name="wall_3" parent="wall_2" 
+      trans_x="0" trans_y="${wall_80_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_54}" mass_of_object="${wall_54_mass}" com_of_object="${com_wall_54}"
+      type_of_object="fixed"
+      link_name="wall_4" parent="wall_3" 
+      trans_x="0" trans_y="${wall_120_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_120}" mass_of_object="${wall_120_mass}" com_of_object="${com_wall_120}"
+      type_of_object="fixed"
+      link_name="wall_5" parent="wall_4" 
+      trans_x="-${walls_width}" trans_y="${wall_54_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="-${M_PI_2}"/>
+    <model_template object_model_path="${wall_120}" mass_of_object="${wall_120_mass}" com_of_object="${com_wall_120}"
+      type_of_object="fixed"
+      link_name="wall_6" parent="wall_5" 
+      trans_x="0" trans_y="${wall_120_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_7" parent="wall_6" 
+      trans_x="0" trans_y="${wall_120_len+walls_width}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="${M_PI_2}"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_8" parent="wall_7" 
+      trans_x="0" trans_y="${wall_80_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_9" parent="wall_8" 
+      trans_x="0" trans_y="${wall_80_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_10" parent="wall_9" 
+      trans_x="-${walls_width}" trans_y="${wall_80_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="-${M_PI_2}"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_11" parent="wall_10" 
+      trans_x="0" trans_y="${wall_80_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_12" parent="wall_11" 
+      trans_x="0" trans_y="${wall_80_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_13" parent="wall_12" 
+      trans_x="0" trans_y="${wall_80_len-walls_width}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="-${M_PI_2}"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_14" parent="wall_13" 
+      trans_x="0" trans_y="${wall_80_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_15" parent="wall_14" 
+      trans_x="0" trans_y="${wall_80_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_120}" mass_of_object="${wall_120_mass}" com_of_object="${com_wall_120}"
+      type_of_object="fixed"
+      link_name="wall_16" parent="wall_15" 
+      trans_x="-${walls_width}" trans_y="${wall_80_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="${M_PI_2}"/>
+    <model_template object_model_path="${wall_120}" mass_of_object="${wall_120_mass}" com_of_object="${com_wall_120}"
+      type_of_object="fixed"
+      link_name="wall_17" parent="wall_16" 
+      trans_x="0" trans_y="${wall_120_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_54}" mass_of_object="${wall_54_mass}" com_of_object="${com_wall_54}"
+      type_of_object="fixed"
+      link_name="wall_18" parent="wall_17" 
+      trans_x="0" trans_y="${wall_120_len-walls_width}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="-${M_PI_2}"/>
+    <model_template object_model_path="${wall_120}" mass_of_object="${wall_120_mass}" com_of_object="${com_wall_120}"
+      type_of_object="fixed"
+      link_name="wall_19" parent="wall_18" 
+      trans_x="0" trans_y="${wall_54_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_20" parent="wall_19" 
+      trans_x="0" trans_y="${wall_120_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_21" parent="wall_20" 
+      trans_x="-${walls_width}" trans_y="${wall_80_len}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="-${M_PI_2}"/>
+    
+    <!-- shelfs -->
+    <model_template object_model_path="${shelf}" mass_of_object="${shelf_mass}" com_of_object="${com_shelf}"
+      type_of_object="fixed"
+      link_name="shelf_1" parent="${origin}" 
+      trans_x="-${platform_width}" trans_y="-${shelf_length+entrance_width/2}" 
+      trans_z="0" rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${shelf}" mass_of_object="${shelf_mass}" com_of_object="${com_shelf}"
+      type_of_object="fixed"
+      link_name="shelf_2" parent="shelf_1" 
+      trans_x="0" trans_y="-${shelf_length}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${shelf}" mass_of_object="${shelf_mass}" com_of_object="${com_shelf}"
+      type_of_object="fixed"
+      link_name="shelf_3" parent="shelf_2" 
+      trans_x="0" trans_y="-${shelf_length}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${shelf}" mass_of_object="${shelf_mass}" com_of_object="${com_shelf}"
+      type_of_object="fixed"
+      link_name="shelf_4" parent="shelf_3" 
+      trans_x="0" trans_y="-${shelf_length}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    
+    <!-- platforms -->
+    <model_template object_model_path="${platform}" mass_of_object="${platform_mass}" com_of_object="${com_platform}"
+      type_of_object="fixed"
+      link_name="platform_5" parent="${origin}" 
+      trans_x="${wall_120_len/2}" trans_y="${platform_width+(entrance_width/2)}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="-${M_PI_2}"/>
+    <model_template object_model_path="${platform}" mass_of_object="${platform_mass}" com_of_object="${com_platform}"
+      type_of_object="fixed"
+      link_name="platform_7" parent="${origin}" 
+      trans_x="${(2*wall_80_len)+wall_54_len+wall_120_len+(2*walls_width)}" 
+      trans_y="-${entrance_width+(2*wall_80_len+walls_width)}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${platform}" mass_of_object="${platform_mass}" com_of_object="${com_platform}"
+      type_of_object="fixed"
+      link_name="platform_6_1" parent="platform_7" 
+      trans_x="${platform_width}" trans_y="0" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${platform}" mass_of_object="${platform_mass}" com_of_object="${com_platform}"
+      type_of_object="fixed"
+      link_name="platform_6_2" parent="platform_6_1" 
+      trans_x="0" trans_y="0" trans_z="${platform_height}" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    
+    <model_template object_model_path="${platform}" mass_of_object="${platform_mass}" com_of_object="${com_platform}"
+      type_of_object="fixed"
+      link_name="platform_8" parent="${origin}" 
+      trans_x="${wall_120_len+wall_80_len-platform_len}" 
+      trans_y="-${(1.5*entrance_width)+(shelf_length*4)-(platform_width/2)}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="-${M_PI_2}"/>
+    
+    <!-- rack -->
+    <model_template object_model_path="${rack}" mass_of_object="${aid_tray_rack_mass}" com_of_object="${com_rack}"
+      type_of_object="fixed"
+      link_name="rack" parent="${origin}" 
+      trans_x="${wall_80_len+wall_120_len}" trans_y="${(platform_width/2)+(entrance_width/2)}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="${M_PI+(M_PI_2/1.5)}"/>
+    
+    <!-- conveyor belt -->
+    <model_template object_model_path="${conveyor_belt}" mass_of_object="${conveyor_belt_mass}" com_of_object="${com_conveyor_belt}"
+      type_of_object="fixed"
+      link_name="conveyor_belt" parent="${origin}" 
+      trans_x="${conveyor_belt_length/2}" trans_y="-${entrance_width+(4*shelf_length)}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="${M_PI_2}"/>
+    <model_template object_model_path="${quality_control_camera}" mass_of_object="${quality_control_camera_mass}" com_of_object="${com_quality_control_camera}"
+      type_of_object="fixed"
+      link_name="quality_control_camera" parent="conveyor_belt" 
+      trans_x="-${quality_control_camera_width/2}" trans_y="${conveyor_belt_length/2}" trans_z="${conveyor_belt_height-0.04}" 
+      rot_x="0" rot_y="0" rot_z="-${M_PI_2}"/>
+    <model_template object_model_path="${exit_ramp}" mass_of_object="${exit_ramp_mass}" com_of_object="${com_exit_ramp}"
+      type_of_object="fixed"
+      link_name="exit_ramp" parent="conveyor_belt" 
+      trans_x="0" trans_y="-${exit_ramp_breadth/4}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    
+    <!-- force fitting machine -->
+    <model_template object_model_path="${force_fitting_machine}" mass_of_object="${force_fitting_machine_mass}"  com_of_object="${com_force_fitting}"
+      type_of_object="fixed"
+      link_name="force_fitting_machine" parent="platform_5" 
+      trans_x="${platform_width/2}" trans_y="${platform_len/2}" trans_z="${platform_height}" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    
+    <!-- drill machine -->
+    <model_template object_model_path="${drill_machine}" mass_of_object="${drill_machine_mass}" com_of_object="${com_drill_machine}"
+      type_of_object="fixed"
+      link_name="drill_machine" parent="platform_8" 
+      trans_x="${platform_width/2}" trans_y="${platform_len/2}" trans_z="${platform_height}" 
+      rot_x="0" rot_y="0" rot_z="${M_PI}"/>
+
+    <!-- centered walls -->
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_middle_1" parent="${origin}" 
+      trans_x="${wall_80_len-(wall_54_len/2)+(wall_120_len/2)}" 
+      trans_y="-${(entrance_width+walls_width)+(2*wall_80_len)}" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_54}" mass_of_object="${wall_54_mass}" com_of_object="${com_wall_54}"
+      type_of_object="fixed"
+      link_name="wall_middle_2" parent="wall_middle_1" 
+      trans_x="0" trans_y="0" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="-${M_PI_2}"/>
+    <model_template object_model_path="${wall_80}" mass_of_object="${wall_80_mass}" com_of_object="${com_wall_80}"
+      type_of_object="fixed"
+      link_name="wall_middle_3" parent="wall_middle_1" 
+      trans_x="${wall_54_len+walls_width}" trans_y="0" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+    <model_template object_model_path="${wall_54}" mass_of_object="${wall_54_mass}" com_of_object="${com_wall_54}"
+      type_of_object="fixed"
+      link_name="wall_middle_4" parent="wall_middle_2" 
+      trans_x="-${wall_80_len-walls_width}" trans_y="0" trans_z="0" 
+      rot_x="0" rot_y="0" rot_z="0"/>
+  </xacro:macro>
+
+  <xacro:lisboa-world name="lisboa-world" />
+</robot>

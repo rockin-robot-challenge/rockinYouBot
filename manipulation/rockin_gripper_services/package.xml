@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>rockin_gripper_services</name>
+  <version>0.0.1</version>
+  <description>provides specific services for the youBot gripper</description>
+
+  <maintainer email="tim.friedrich@kuka.com">Tim Friedrich</maintainer>
+
+  <license>GPLv3</license>
+
+  <author email="tim.friedrich@kuka.com">Tim Friedrich</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>rockin_manipulation_msgs</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+ 
+</package>

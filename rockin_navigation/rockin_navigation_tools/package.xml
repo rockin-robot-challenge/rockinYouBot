@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>rockin_navigation_tools</name>
+  <version>0.0.2</version>
+  <description>several base navigation tools</description>
+
+  <maintainer email="tim.friedrich@kuka.com">Tim Friedrich</maintainer>
+  
+  <license>GPLv3</license>
+
+  <author email="tim.friedrich@kuka.com">Tim Friedrich</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>visualization_msgs</run_depend>
+
+</package>
