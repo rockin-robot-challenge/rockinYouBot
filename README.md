@@ -206,14 +206,14 @@ After entering one of the "go" commands MoveIt! plans a path to this position an
 
 ## Command overview
 
-roslaunch rockin_bringup_sim robot.launch
-roslaunch rockin_bringup robot.launch
-roslaunch rockin_teleop rockin_teleop_joypad.launch
-roslaunch rockin_2dslam 2dslam.launch
-roslaunch rockin_2dnav 2dnav.launch
-roslaunch rockin_moveit_rockin_youbot move_group.launch
-rosrun moveit_commander moveit_commander_cmdline.py
-rosrun gazebo_ros gzclient
-rosrun rviz rviz
-rosrun map_server map_saver
+	roslaunch rockin_bringup_sim robot.launch
+	roslaunch rockin_bringup robot.launch
+	roslaunch rockin_teleop rockin_teleop_joypad.launch
+	roslaunch rockin_2dslam 2dslam.launch
+	roslaunch rockin_2dnav 2dnav.launch
+	roslaunch rockin_moveit_rockin_youbot move_group.launch
+	rosrun moveit_commander moveit_commander_cmdline.py
+	rosrun gazebo_ros gzclient
+	rosrun rviz rviz
+	rosrun map_server map_saver
     
